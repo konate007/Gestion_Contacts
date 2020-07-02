@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.RadioButton?>
+
+<BorderPane prefHeight="638.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.projet.finale.java.controller.TransactionController">
+   <left>
+      <AnchorPane prefHeight="646.0" prefWidth="913.0" style="-: ;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="compteTable" layoutX="358.0" layoutY="133.0" prefHeight="336.0" prefWidth="525.0">
+              <columns>
+                <TableColumn fx:id="code" prefWidth="91.0" text="Code" />
+                <TableColumn fx:id="type" prefWidth="83.0" text="Type" />
+                  <TableColumn fx:id="solde" prefWidth="102.0" text="Solde" />
+                  <TableColumn fx:id="cin" prefWidth="77.0" text="Cin" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="creer" layoutX="364.0" layoutY="426.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="81.0" text="Créer" visible="false" />
+            <Label layoutX="362.0" layoutY="56.0" prefHeight="21.0" prefWidth="85.0" text="Search by :" />
+            <ComboBox fx:id="combobox" layoutX="458.0" layoutY="51.0" prefHeight="31.0" prefWidth="90.0" />
+            <TextField fx:id="textFieldS" layoutX="558.0" layoutY="51.0" />
+            <Button layoutX="759.0" layoutY="51.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="101.0">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../Users/Konate/Pictures/Camera%20Roll/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label fx:id="cinL" layoutX="121.0" layoutY="200.0" text="Cin :" />
+            <Label fx:id="soldeL" layoutX="72.0" layoutY="238.0" text="Solde initial :" />
+            <Label fx:id="decouvertL" layoutX="25.0" layoutY="280.0" prefHeight="21.0" prefWidth="133.0" text="Découvert autorisé :" />
+            <TextField fx:id="decouvertC" layoutX="161.0" layoutY="275.0" prefHeight="31.0" prefWidth="141.0" />
+            <TextField fx:id="cinC" layoutX="162.0" layoutY="195.0" prefHeight="31.0" prefWidth="138.0" />
+            <Separator layoutX="352.0" layoutY="44.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="6.0" />
+            <TextField fx:id="soldeC" layoutX="162.0" layoutY="233.0" prefHeight="31.0" prefWidth="139.0" />
+            <Separator layoutX="4.0" layoutY="469.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="3.0" />
+            <Separator layoutX="320.0" layoutY="471.0" orientation="VERTICAL" prefHeight="156.0" prefWidth="7.0" />
+            <Separator layoutX="13.0" layoutY="470.0" prefHeight="11.0" prefWidth="312.0" />
+            <Separator layoutX="4.0" layoutY="625.0" prefHeight="6.0" prefWidth="319.0" />
+            <Separator layoutX="353.0" layoutY="44.0" prefHeight="1.0" prefWidth="516.0" />
+            <Separator layoutX="347.0" layoutY="105.0" prefHeight="0.0" prefWidth="524.0" />
+            <Separator layoutX="352.0" layoutY="43.0" orientation="VERTICAL" prefHeight="62.0" prefWidth="6.0" />
+            <Separator layoutX="865.0" layoutY="38.0" orientation="VERTICAL" prefHeight="69.0" prefWidth="6.0" />
+            <Separator layoutX="18.0" layoutY="75.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="4.0" />
+            <Separator layoutX="323.0" layoutY="75.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="5.0" />
+            <Separator layoutX="19.0" layoutY="34.0" prefHeight="3.0" prefWidth="303.0" />
+            <Separator layoutX="14.0" layoutY="497.0" prefHeight="0.0" prefWidth="311.0" />
+            <Label fx:id="numCompteL" layoutX="16.0" layoutY="515.0" text="Numéro du compte:" />
+            <TextField fx:id="numCompteC" layoutX="169.0" layoutY="510.0" prefHeight="31.0" prefWidth="128.0" />
+            <Button fx:id="ok" layoutX="258.0" layoutY="559.0" mnemonicParsing="false" onAction="#transfert" text="Ok" />
+            <Separator layoutX="19.0" layoutY="415.0" prefHeight="4.0" prefWidth="307.0" />
+            <Separator layoutX="20.0" layoutY="37.0" prefHeight="2.0" prefWidth="301.0" />
+            <Separator layoutX="352.0" layoutY="38.0" prefHeight="2.0" prefWidth="518.0" />
+            <Separator layoutX="20.0" layoutY="73.0" prefHeight="0.0" prefWidth="303.0" />
+            <MenuBar layoutX="20.0" layoutY="6.0" prefHeight="25.0" prefWidth="847.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Compte">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Transaction">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Nouveau" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Client">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Gérer" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Exporter">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Créer relevé" />
+                     <MenuItem mnemonicParsing="false" text="Fiche clients" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label layoutX="25.0" layoutY="46.0" text="Ouverture d'un compte">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="creer" layoutX="241.0" layoutY="368.0" mnemonicParsing="false" onAction="#creer" text="Créer" />
+            <RadioButton fx:id="courant" layoutX="50.0" layoutY="104.0" mnemonicParsing="false" text="Courant">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="epargne" layoutX="192.0" layoutY="104.0" mnemonicParsing="false" text="Epargne" toggleGroup="$group" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

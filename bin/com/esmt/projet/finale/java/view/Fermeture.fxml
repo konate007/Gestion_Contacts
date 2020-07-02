@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <center>
+      <AnchorPane prefHeight="207.0" prefWidth="377.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField layoutX="222.0" layoutY="59.0" prefHeight="31.0" prefWidth="132.0" />
+            <Label layoutX="14.0" layoutY="64.0" text="Numéro du compte à fermer :" />
+            <Button layoutX="120.0" layoutY="122.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" text="Valider" />
+            <Button layoutX="239.0" layoutY="122.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" text="Annuler" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

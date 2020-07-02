@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="100.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esmt.projet.contact.manager.controlleur.ContactControlleur">
+   <top>
+      <AnchorPane fx:id="ensemble" prefHeight="300.0" prefWidth="900.0" style="-: ;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="contactTable" layoutX="457.0" layoutY="113.0" prefHeight="355.0" prefWidth="417.0">
+              <columns>
+                  <TableColumn fx:id="nom" prefWidth="102.0" text="Date" />
+                  <TableColumn fx:id="email" prefWidth="77.0" text="Type" />
+                  <TableColumn fx:id="telephone" prefWidth="115.0" text="Montant" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="creer" layoutX="364.0" layoutY="426.0" mnemonicParsing="false" onAction="#creerNouvelleListe" prefHeight="31.0" prefWidth="81.0" text="Créer" visible="false" />
+            <Label fx:id="idL" layoutX="52.0" layoutY="290.0" text="Votre numéro de compte:" />
+            <Label fx:id="prenomL" layoutX="158.0" layoutY="342.0" text="Montant :" />
+            <TextField fx:id="idC" layoutX="113.0" layoutY="83.0" visible="false" />
+            <TextField fx:id="prenomC" layoutX="230.0" layoutY="337.0" prefHeight="31.0" prefWidth="164.0" />
+            <TextField fx:id="prenomC1" layoutX="230.0" layoutY="285.0" prefHeight="31.0" prefWidth="164.0" />
+            <Separator layoutX="12.0" layoutY="613.0" prefHeight="0.0" prefWidth="357.0" />
+            <Separator layoutX="35.0" layoutY="115.0" prefHeight="12.0" prefWidth="391.0" />
+            <Separator layoutX="33.0" layoutY="271.0" orientation="VERTICAL" prefHeight="205.0" prefWidth="0.0" />
+            <Separator layoutX="421.0" layoutY="270.0" orientation="VERTICAL" prefHeight="195.0" prefWidth="7.0" />
+            <Separator layoutX="34.0" layoutY="262.0" prefHeight="8.0" prefWidth="389.0" />
+            <Separator layoutX="28.0" layoutY="459.0" prefHeight="13.0" prefWidth="396.0" />
+            <Button layoutX="207.0" layoutY="399.0" mnemonicParsing="false" text="Effectuer" />
+            <Button layoutX="301.0" layoutY="399.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="73.0" text="Quitter" />
+            <Separator layoutX="33.0" layoutY="250.0" prefHeight="0.0" prefWidth="393.0" />
+            <Separator layoutX="34.0" layoutY="117.0" orientation="VERTICAL" prefHeight="133.0" prefWidth="5.0" />
+            <Separator layoutX="423.0" layoutY="117.0" orientation="VERTICAL" prefHeight="139.0" prefWidth="3.0" />
+            <Label layoutX="101.0" layoutY="139.0" text="Quelle opération voulez vous effecuer ?" />
+            <RadioButton layoutX="273.0" layoutY="195.0" mnemonicParsing="false" text="Dépot" />
+            <RadioButton layoutX="138.0" layoutY="195.0" mnemonicParsing="false" text="Retrait" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
